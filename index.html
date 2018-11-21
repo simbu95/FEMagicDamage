@@ -1,3 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>FF4 Magic Damage Calc</title>
+</head>
 <body>
-Hello
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 panel">
+        <div class="inner-panel">
+		  <div class="container">
+			<div class="row">
+                <div class="col-6">
+                    <span class="input-span">Agility</span>
+                </div>
+                <div class="col-3">
+					<input type="number" id="Agility" min=0 max=99 step=1/>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Wisdom</span>
+                </div>
+                <div class="col-3">
+					<input type="number" id="Wisdom" min=0 max=99 step=1/>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Willpower</span>
+                </div>
+                <div class="col-3">
+					<input type="number" id="Willpower" min=0 max=99 step=1/>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Shield</span>
+                </div>
+                <div class="col-6">
+					<select id="Shield"></select>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Helmet</span>
+                </div>
+                <div class="col-6">
+					<select id="Helmet"></select>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Armor</span>
+                </div>
+                <div class="col-6">
+					<select id="Armor"></select>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="input-span">Ring</span>
+                </div>
+                <div class="col-6">
+					<select id="Ring"></select>
+				</div>
+                <div class="row">
+				    <div class="col"><button id="calc">Calculate!</button></div>
+                    <div class="col"><button id="clear">Clear!</button></div>
+			    </div>
+
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+</html>
