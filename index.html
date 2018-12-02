@@ -129,56 +129,11 @@ var chart = new Chart(ctx, {
 </script>
 <script>
 	document.getElementById('calc').addEventListener('click',calculate);
-	 $.getJSON("Shields.json", function(data) {SData=data.Data;})
-	$.getJSON("Helmets.json", function(data) {HData=data.Data;})
-	$.getJSON("Armor.json", function(data) {AData=data.Data;})
-	$.getJSON("Rings.json", function(data) {RData=data.Data;})
-			
-	function calculate() {
-		hi=HData[$('Helmet')[0].selectedIndex];
-			   ai=AData[$('Armor')[0].selectedIndex];
-			   si=SData[$('Shield')[0].selectedIndex];
-			   ri=RData[$('Ring')[0].selectedIndex];
-		wisdom=$('Wisdom')[0].value+hi.Wisdom+ai.Wisdom+ri.Wisdom+si.Wisdom;
-			 agility=$('Agility')[0].value+hi.Agility+ai.Agility+ri.Agility+si.Agility;
-			 willpower=$('WillPower')[0].value+hi.WillPower+ai.WillPower+ri.WillPower+si.WillPower;
-		mdef=hi["M.Def"]+ai["M.Def"]+si["M.Def"]+ri["M.Def"];
-		meva=hi["M.Evade"]+ai["M.Evade"]+si["M.Evade"]+ri["M.Evade"];
-		smight=$('Might')[0].value;
-		SMulti=$('Multi')[0].value;
-		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
-		chartdat.sort(function(a,b){return a.Dam-b.Dam});
-		chart.data.datasets[0].data[0]=30;
-		chart.update();
-	}
-	function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
-		eva=[]
-		EMulti=Math.floor(agi/32)+Math.floor((will+wisdom)/32));
-		for (i=0;i<=EMulti;i++){
-            		eva.push(Math.pow(1-Meva,(EMulti-i)*Math.pow(MEva,i)*Math.Combinations(EMulti,i));
-        	}
-		damages=[]
-		for (i=0;i<50;i++){
-            		damages.push((1+.01*i)*smight-mdef);
-        	}
-		calced=[]
-		for( i=0;i<Evas.length;i++){
-            
-            		for (M of damages){
-				damage=M*(smulti-i);
-				if(damage<0){
-                    			damage=1;
-                		}
-				percent=Evas.get(i)/50;
-				calced.push({Dam=damage,Per=percent)
-			}
-		}
-		return calced;
-			
-	}
-</script>
-<script>
-    ref=$('#Helmet')[0];
+	 $.getJSON("Shields.json", function(data) {var SData=data.Data;})
+	$.getJSON("Helmets.json", function(data) {var HData=data.Data;})
+	$.getJSON("Armor.json", function(data) {var AData=data.Data;})
+	$.getJSON("Rings.json", function(data) {var RData=data.Data;})
+	ref=$('#Helmet')[0];
     for( x of HData){
     var option=document.createElement("option");
     option.text=x.Name;
@@ -201,6 +156,48 @@ var chart = new Chart(ctx, {
     var option=document.createElement("option");
     option.text=x.Name;
     ref.add(option);
-    }
+    }	
+	function calculate() {
+		hi=HData[$('Helmet')[0].selectedIndex];
+			   ai=AData[$('Armor')[0].selectedIndex];
+			   si=SData[$('Shield')[0].selectedIndex];
+			   ri=RData[$('Ring')[0].selectedIndex];
+		wisdom=$('Wisdom')[0].value+hi.Wisdom+ai.Wisdom+ri.Wisdom+si.Wisdom;
+			 agility=$('Agility')[0].value+hi.Agility+ai.Agility+ri.Agility+si.Agility;
+			 willpower=$('WillPower')[0].value+hi.WillPower+ai.WillPower+ri.WillPower+si.WillPower;
+		mdef=hi["M.Def"]+ai["M.Def"]+si["M.Def"]+ri["M.Def"];
+		meva=hi["M.Evade"]+ai["M.Evade"]+si["M.Evade"]+ri["M.Evade"];
+		smight=$('Might')[0].value;
+		SMulti=$('Multi')[0].value;
+		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
+		chartdat.sort(function(a,b){return a.Dam-b.Dam});
+		chart.data.datasets[0].data[0]=30;
+		chart.update();
+	}
+	function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
+		eva=[]
+		EMulti=Math.floor(agi/32)+Math.floor((will+wisdom)/32);
+		for (i=0;i<=EMulti;i++){
+            		eva.push(Math.pow(1-Meva,(EMulti-i)*Math.pow(MEva,i)*Math.Combinations(EMulti,i));
+        	}
+		damages=[]
+		for (i=0;i<50;i++){
+            		damages.push((1+.01*i)*smight-mdef);
+        	}
+		calced=[]
+		for( i=0;i<Evas.length;i++){
+            
+            		for (M of damages){
+				damage=M*(smulti-i);
+				if(damage<0){
+                    			damage=1;
+                		}
+				percent=Evas.get(i)/50;
+				calced.push({Dam=damage,Per=percent)
+			}
+		}
+		return calced;
+			
+	}
 </script>
 </html>
