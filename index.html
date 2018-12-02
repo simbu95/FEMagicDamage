@@ -114,7 +114,7 @@ var chart = new Chart(ctx, {
             label: "Death Chance",
             fill: "false",
             borderColor: 'rgb(0, 0, 100)',
-            data: [{x=0, y=0}, {x=10,y=20}],
+            data: [{x: 0, y: 0}, {x: 10,y: 20}],
         }]
     },
 
@@ -126,7 +126,7 @@ var chart = new Chart(ctx, {
 	document.getElementById('calc').addEventListener('click',calculate);
 	
 	function calculate() {
-		chart.data.datasets[0].data[0]={x=50,y=20};
+		chart.data.datasets[0].data[0]={x: 50,y: 20};
 		chart.update();
 	}
 </script>
