@@ -135,8 +135,8 @@ var chart = new Chart(ctx, {
 	}
 </script>
 <script>
-    datas=$.getJSON("Helmets.json", function() {
-    y=datas.responseJSON.Data;
+    datas=$.getJSON("Helmets.json", function(data) {
+    y=data.Data;
     ref=$('#Helmet')[0];
     for( x of y){
     var option=document.createElement("option");
@@ -145,7 +145,7 @@ var chart = new Chart(ctx, {
     }
 })
 	    
-    datas=$.getJSON("Shields.json", function() {
+    datas=$.getJSON("Shields.json", function(data) {
     y=datas.responseJSON.Data;
     ref=$('#Shield')[0];
     for( x of y){
@@ -154,7 +154,7 @@ var chart = new Chart(ctx, {
     ref.add(option);
     }
 })
-    datas=$.getJSON("Armor.json", function() {
+    datas=$.getJSON("Armor.json", function(data) {
     y=datas.responseJSON.Data;
     ref=$('#Armor')[0];
     for( x of y){
@@ -163,7 +163,7 @@ var chart = new Chart(ctx, {
     ref.add(option);
     }
 })
-    datas=$.getJSON("Rings.json", function() {
+    datas=$.getJSON("Rings.json", function(data) {
     y=datas.responseJSON.Data;
     ref=$('#Ring')[0];
     for( x of y){
