@@ -133,10 +133,10 @@ var chart = new Chart(ctx, {
 	var AData;
 	var RData;
 	document.getElementById('calc').addEventListener('click',calculate);
-	 $.getJSON("Shields.json", function(data) {SData=data.Data;})
-	$.getJSON("Helmets.json", function(data) {HData=data.Data;})
-	$.getJSON("Armor.json", function(data) {AData=data.Data;})
-	$.getJSON("Rings.json", function(data) {RData=data.Data;})
+	 $.getJSON("Shields.json", function(data) {window.SData=data.Data;})
+	$.getJSON("Helmets.json", function(data) {window.HData=data.Data;})
+	$.getJSON("Armor.json", function(data) {window.AData=data.Data;})
+	$.getJSON("Rings.json", function(data) {window.RData=data.Data;})
 	ref=$('#Helmet')[0];
     for( x of HData){
     var option=document.createElement("option");
