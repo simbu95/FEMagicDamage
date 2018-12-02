@@ -225,6 +225,9 @@ ref=$('#Ring')[0];
 			while(data[index].Dam<=x){
 				total=total-data[index].Per;
 				index++;
+				if(index<data.length){
+					break;
+				}
 			}
 		}
 		ret.push(total);
