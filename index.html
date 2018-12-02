@@ -182,6 +182,9 @@ ref=$('#Ring')[0];
 		meva=Number(hi["M.Evade"])+Number(ai["M.Evade"])+Number(si["M.Evade"])+Number(ri["M.Evade"]);
 		smight=Number($('#Might')[0].value);
 		SMulti=Number($('#Multi')[0].value);
+		wisdom= wisdom<0 ? 1 : wisdom;
+		agility= agility<0 ? 1 : agility;
+		willpower= willpower<0 ? 1 : willpower;
 		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
 		chartdat.sort(function(a,b){return a.Dam-b.Dam});
 		chart.data.datasets.push({label: "Death Chance",
