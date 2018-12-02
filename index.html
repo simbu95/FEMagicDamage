@@ -198,14 +198,14 @@ ref=$('#Ring')[0];
             		damages.push((1+.01*i)*smight-mdef);
         	}
 		calced=[]
-		for( i=0;i<Evas.length;i++){
+		for( i=0;i<eva.length;i++){
             
             		for (M of damages){
 				damage=M*(SMulti-i);
 				if(damage<0){
                     			damage=1;
                 		}
-				percent=Evas.get(i)/50;
+				percent=eva.get(i)/50;
 				calced.push({Dam: damage,Per: percent});
 			}
 		}
