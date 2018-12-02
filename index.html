@@ -135,9 +135,33 @@ var chart = new Chart(ctx, {
 	}
 </script>
 <script>
-    var datas=$.getJSON("Helmets.json", function() {
+    datas=$.getJSON("Helmets.json", function() {
     y=datas.responseJSON.Data;
     ref=$('#Helmet')[0];
+    for( x of y){
+    var option=document.createElement("option");
+    option.text=x.Name;
+    ref.add(option);
+	    
+	    datas=$.getJSON("Shields.json", function() {
+    y=datas.responseJSON.Data;
+    ref=$('#Shield')[0];
+    for( x of y){
+    var option=document.createElement("option");
+    option.text=x.Name;
+    ref.add(option);
+	    
+	    datas=$.getJSON("Armor.json", function() {
+    y=datas.responseJSON.Data;
+    ref=$('#Armor')[0];
+    for( x of y){
+    var option=document.createElement("option");
+    option.text=x.Name;
+    ref.add(option);
+	    
+	    datas=$.getJSON("Rings.json", function() {
+    y=datas.responseJSON.Data;
+    ref=$('#Ring')[0];
     for( x of y){
     var option=document.createElement("option");
     option.text=x.Name;
