@@ -220,11 +220,11 @@ ref=$('#Ring')[0];
 		ret=[];
 		total=1;
 		index=0;
-		for(x=0;x<2700;x+=100){
+		for(x=0;x<=2700;x+=100){
 		if(index<data.length){
 			while(data[index].Dam<=x){
-				index++;
 				total=total-data[index].Per;
+				index++;
 			}
 		}
 		ret.push(total);
