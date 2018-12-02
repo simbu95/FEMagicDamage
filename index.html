@@ -110,11 +110,12 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
+	labels: [0, 1, 2, 3, 4, 5],
         datasets: [{
             label: "Death Chance",
             fill: "false",
             borderColor: 'rgb(0, 0, 100)',
-            data: [{x: 0, y: 0}, {x: 10,y: 20}],
+            data: [0,10,20,30],
         }]
     },
 
@@ -126,7 +127,7 @@ var chart = new Chart(ctx, {
 	document.getElementById('calc').addEventListener('click',calculate);
 	
 	function calculate() {
-		chart.data.datasets[0].data[0]={x: 50,y: 20};
+		chart.data.datasets[0].data[0]=30;
 		chart.update();
 	}
 </script>
