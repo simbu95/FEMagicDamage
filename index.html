@@ -189,7 +189,7 @@ ref=$('#Ring')[0];
 	}
 	function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
 		eva=[]
-		EMulti=Math.floor(agi/32)+Math.floor((will+wisdom)/32);
+		EMulti=Math.floor(agi/32)+Math.floor((will+wis)/32);
 		for (i=0;i<=EMulti;i++){
             		eva.push(Math.pow(1-Meva,(EMulti-i)*Math.pow(MEva,i)*Math.Combinations(EMulti,i)));
         	}
