@@ -123,4 +123,13 @@ var chart = new Chart(ctx, {
     options: {}
 });
 </script>
+<script>
+	$('#calc').click(function() {
+		calculate();
+	});
+	
+	function calculate() {
+		chart.data.datasets[0].data[0]=50;
+	}
+</script>
 </html>
