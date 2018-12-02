@@ -137,7 +137,7 @@ var chart = new Chart(ctx, {
 <script>
     var datas=$.getJSON("helmets.json", function() {
     y=datas.responseJSON.Data;
-    ref=$(#Helmet)[0]
+    ref=$('#Helmet')[0];
     for( x of y){
     var option=document.createElement("option");
     option.text=x.Name;
