@@ -147,7 +147,7 @@ var chart = new Chart(ctx, {
 		smight=$('Might')[0].value;
 		SMulti=$('Multi')[0].value;
 		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
-		chartdat.sort(function(a,b){return a.Dam-b.Dam;}
+		chartdat.sort(function(a,b){return a.Dam-b.Dam});
 		chart.data.datasets[0].data[0]=30;
 		chart.update();
 	}
@@ -202,6 +202,5 @@ var chart = new Chart(ctx, {
     option.text=x.Name;
     ref.add(option);
     }
-})
 </script>
 </html>
