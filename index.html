@@ -101,6 +101,7 @@
     </div>  
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 <script> 
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -110,12 +111,12 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-	labels: [0, 1, 2, 3, 4, 5],
+	labels: [0, 100, 200, 300, 400, 500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700],
         datasets: [{
             label: "Death Chance",
             fill: "false",
             borderColor: 'rgb(0, 0, 100)',
-            data: [0,10,20,30],
+            data: [1,.8,.7,.5,.2,.1,.001],
         }]
     },
 
@@ -130,5 +131,10 @@ var chart = new Chart(ctx, {
 		chart.data.datasets[0].data[0]=30;
 		chart.update();
 	}
+</script>
+<script>
+	var datas=$.getJSON("Armors.json", function() {
+  console.log( "success" );
+})
 </script>
 </html>
