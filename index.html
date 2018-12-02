@@ -184,7 +184,10 @@ ref=$('#Ring')[0];
 		SMulti=Number($('#Multi')[0].value);
 		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
 		chartdat.sort(function(a,b){return a.Dam-b.Dam});
-		chart.data.datasets[0].data[0]=30;
+		chart.data.datasets.push({label: "Death Chance",
+            		fill: "false",
+			borderColor: 'rgb(0, 0, 100)',
+            		data: Merge(chartdat) }
 		chart.update();
 	}
 	function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
@@ -214,7 +217,19 @@ ref=$('#Ring')[0];
 			
 	}
 	function Merge(data){
-		
+		ret=[];
+		total=1;
+		index=0;
+		for(x=0;x<2700;x+=100){
+		if(index<data.length){
+			while(data[index].Dam<=x){
+				index++;
+				total-data[index].Per
+			}
+		}
+		ret.push(total);
+		}
+		return ret;
 	}
 </script>
 </html>
