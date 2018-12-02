@@ -1,0 +1,210 @@
+{"Data":[
+ {
+   "Name": "None",
+   "Def": 0,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Iron",
+   "Def": 3,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Shadow",
+   "Def": 4,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Darkness",
+   "Def": 5,
+   "Evade": 0,
+   "M.Def": 1,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Black",
+   "Def": 6,
+   "Evade": 0,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Paladin",
+   "Def": 7,
+   "Evade": 0,
+   "M.Def": 2,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Silver",
+   "Def": 8,
+   "Evade": 0,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Diamond",
+   "Def": 9,
+   "Evade": 0,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Samurai",
+   "Def": 10,
+   "Evade": 0,
+   "M.Def": 6,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Dragoon",
+   "Def": 11,
+   "Evade": 0,
+   "M.Def": 7,
+   "M.Evade": 4
+ },
+ {
+   "Name": "Crystal",
+   "Def": 12,
+   "Evade": 0,
+   "M.Def": 8,
+   "M.Evade": 5,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Cap",
+   "Def": 1,
+   "Evade": 5,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Leather",
+   "Def": 2,
+   "Evade": 6,
+   "M.Def": 3,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Gaea",
+   "Def": 3,
+   "Evade": 7,
+   "M.Def": 5,
+   "M.Evade": 5,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 3
+ },
+ {
+   "Name": "Wizard",
+   "Def": 5,
+   "Evade": 8,
+   "M.Def": 7,
+   "M.Evade": 7,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Tiara",
+   "Def": 7,
+   "Evade": 10,
+   "M.Def": 10,
+   "M.Evade": 9,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 10
+ },
+ {
+   "Name": "Ribbon",
+   "Def": 9,
+   "Evade": 12,
+   "M.Def": 12,
+   "M.Evade": 12,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Headband",
+   "Def": 1,
+   "Evade": 10,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Bandanna",
+   "Def": 3,
+   "Evade": 12,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Ninja",
+   "Def": 5,
+   "Evade": 14,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 3,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Glass",
+   "Def": 30,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ }
+]
+}
