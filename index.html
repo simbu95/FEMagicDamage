@@ -128,11 +128,15 @@ var chart = new Chart(ctx, {
 });
 </script>
 <script>
+	var SData;
+	var HData;
+	var AData;
+	var RData;
 	document.getElementById('calc').addEventListener('click',calculate);
-	 $.getJSON("Shields.json", function(data) {var SData=data.Data;})
-	$.getJSON("Helmets.json", function(data) {var HData=data.Data;})
-	$.getJSON("Armor.json", function(data) {var AData=data.Data;})
-	$.getJSON("Rings.json", function(data) {var RData=data.Data;})
+	 $.getJSON("Shields.json", function(data) {SData=data.Data;})
+	$.getJSON("Helmets.json", function(data) {HData=data.Data;})
+	$.getJSON("Armor.json", function(data) {AData=data.Data;})
+	$.getJSON("Rings.json", function(data) {RData=data.Data;})
 	ref=$('#Helmet')[0];
     for( x of HData){
     var option=document.createElement("option");
