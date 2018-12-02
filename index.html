@@ -133,46 +133,55 @@ var chart = new Chart(ctx, {
 	var AData="";
 	var RData="";
 	document.getElementById('calc').addEventListener('click',calculate);
-	 $.getJSON("Shields.json", function(data) {SData=data.Data;})
-	$.getJSON("Helmets.json", function(data) {HData=data.Data;})
-	$.getJSON("Armor.json", function(data) {AData=data.Data;})
-	$.getJSON("Rings.json", function(data) {RData=data.Data;})
-	ref=$('#Helmet')[0];
-    for( x of HData){
-    var option=document.createElement("option");
-    option.text=x.Name;
-    ref.add(option);
-    }
-    ref=$('#Shield')[0];
+	
+	 $.getJSON("Shields.json", function(data) {
+SData=data.Data;
+ref=$('#Shield')[0];
     for( x of SData){
     var option=document.createElement("option");
     option.text=x.Name;
     ref.add(option);
-    }
-    ref=$('#Armor')[0];
+    }})
+	
+	$.getJSON("Helmets.json", function(data) {
+		HData=data.Data;}
+		 ref=$('#Helmet')[0];
+    for( x of HData){
+    var option=document.createElement("option");
+    option.text=x.Name;
+    ref.add(option);
+    }})
+	
+	$.getJSON("Armor.json", function(data) {
+AData=data.Data;
+ref=$('#Armor')[0];
     for( x of AData){
     var option=document.createElement("option");
     option.text=x.Name;
     ref.add(option);
-    }
-    ref=$('#Ring')[0];
+    }})
+	
+	$.getJSON("Rings.json", function(data) {
+RData=data.Data;
+ref=$('#Ring')[0];
     for( x of RData){
     var option=document.createElement("option");
     option.text=x.Name;
     ref.add(option);
-    }	
+    }})
+	
 	function calculate() {
-		hi=HData[$('Helmet')[0].selectedIndex];
-			   ai=AData[$('Armor')[0].selectedIndex];
-			   si=SData[$('Shield')[0].selectedIndex];
-			   ri=RData[$('Ring')[0].selectedIndex];
-		wisdom=$('Wisdom')[0].value+hi.Wisdom+ai.Wisdom+ri.Wisdom+si.Wisdom;
-			 agility=$('Agility')[0].value+hi.Agility+ai.Agility+ri.Agility+si.Agility;
-			 willpower=$('WillPower')[0].value+hi.WillPower+ai.WillPower+ri.WillPower+si.WillPower;
+		hi=HData[$('#Helmet')[0].selectedIndex];
+			   ai=AData[$('#Armor')[0].selectedIndex];
+			   si=SData[$('#Shield')[0].selectedIndex];
+			   ri=RData[$('#Ring')[0].selectedIndex];
+		wisdom=$('#Wisdom')[0].value+hi.Wisdom+ai.Wisdom+ri.Wisdom+si.Wisdom;
+			 agility=$('#Agility')[0].value+hi.Agility+ai.Agility+ri.Agility+si.Agility;
+			 willpower=$('#WillPower')[0].value+hi.WillPower+ai.WillPower+ri.WillPower+si.WillPower;
 		mdef=hi["M.Def"]+ai["M.Def"]+si["M.Def"]+ri["M.Def"];
 		meva=hi["M.Evade"]+ai["M.Evade"]+si["M.Evade"]+ri["M.Evade"];
-		smight=$('Might')[0].value;
-		SMulti=$('Multi')[0].value;
+		smight=$('#Might')[0].value;
+		SMulti=$('#Multi')[0].value;
 		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
 		chartdat.sort(function(a,b){return a.Dam-b.Dam});
 		chart.data.datasets[0].data[0]=30;
