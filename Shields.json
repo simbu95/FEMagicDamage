@@ -1,0 +1,130 @@
+{"Data":[ 
+ {
+   "Name": "None",
+   "Def": 0,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Iron",
+   "Def": 1,
+   "Evade": 20,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Shadow",
+   "Def": 1,
+   "Evade": 22,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Black",
+   "Def": 2,
+   "Evade": 24,
+   "M.Def": 0,
+   "M.Evade": 1
+ },
+ {
+   "Name": "Paladin",
+   "Def": 2,
+   "Evade": 24,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Silver",
+   "Def": 3,
+   "Evade": 26,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Fire",
+   "Def": 3,
+   "Evade": 28,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Ice",
+   "Def": 3,
+   "Evade": 30,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Diamond",
+   "Def": 4,
+   "Evade": 32,
+   "M.Def": 2,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Aegis",
+   "Def": 4,
+   "Evade": 34,
+   "M.Def": 5,
+   "M.Evade": 4,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 3
+ },
+ {
+   "Name": "Samurai",
+   "Def": 5,
+   "Evade": 36,
+   "M.Def": 3,
+   "M.Evade": 4,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Dragoon",
+   "Def": 6,
+   "Evade": 38,
+   "M.Def": 3,
+   "M.Evade": 5,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Crystal",
+   "Def": 7,
+   "Evade": 40,
+   "M.Def": 4,
+   "M.Evade": 6,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ }
+ ]
+}

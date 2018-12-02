@@ -1,0 +1,280 @@
+{"Data":[
+ {
+   "Name": "None",
+   "Def": 0,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Iron",
+   "Def": 4,
+   "Evade": 0,
+   "M.Def": 1,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Shadow",
+   "Def": 5,
+   "Evade": 0,
+   "M.Def": 1,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Darkness",
+   "Def": 7,
+   "Evade": 0,
+   "M.Def": 2,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Black",
+   "Def": 9,
+   "Evade": 0,
+   "M.Def": 3,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Paladin",
+   "Def": 11,
+   "Evade": 0,
+   "M.Def": 3,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Silver",
+   "Def": 13,
+   "Evade": 0,
+   "M.Def": 4,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Fire",
+   "Def": 15,
+   "Evade": 0,
+   "M.Def": 4,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Ice",
+   "Def": 17,
+   "Evade": 0,
+   "M.Def": 4,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Diamond",
+   "Def": 19,
+   "Evade": 0,
+   "M.Def": 4,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Samurai",
+   "Def": 21,
+   "Evade": 0,
+   "M.Def": 7,
+   "M.Evade": 4
+ },
+ {
+   "Name": "Dragoon",
+   "Def": 23,
+   "Evade": 0,
+   "M.Def": 8,
+   "M.Evade": 5,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Crystal",
+   "Def": 25,
+   "Evade": 0,
+   "M.Def": 10,
+   "M.Evade": 6,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Adamant",
+   "Def": 100,
+   "Evade": 10,
+   "M.Def": 20,
+   "M.Evade": 12,
+   "Agility": 15,
+   "Willpower": 15,
+   "Wisdom": 15
+ },
+ {
+   "Name": "Cloth",
+   "Def": 1,
+   "Evade": 10,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Leather",
+   "Def": 2,
+   "Evade": 10,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Gaea",
+   "Def": 3,
+   "Evade": 10,
+   "M.Def": 3,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Wizard",
+   "Def": 5,
+   "Evade": 10,
+   "M.Def": 5,
+   "M.Evade": 5,
+   "Agility": 0,
+   "Willpower": 5,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Black",
+   "Def": 8,
+   "Evade": 10,
+   "M.Def": 7,
+   "M.Evade": 7,
+   "Agility": 0,
+   "Willpower": 5,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Sorcerer",
+   "Def": 12,
+   "Evade": 10,
+   "M.Def": 9,
+   "M.Evade": 9,
+   "Agility": 0,
+   "Willpower": 5,
+   "Wisdom": 5
+ },
+ {
+   "Name": "White",
+   "Def": 18,
+   "Evade": 10,
+   "M.Def": 10,
+   "M.Evade": 6,
+   "Agility": 0,
+   "Willpower": 15,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Power",
+   "Def": 15,
+   "Evade": 10,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Heroine",
+   "Def": 20,
+   "Evade": 40,
+   "M.Def": 5,
+   "M.Evade": 5,
+   "Agility": 15,
+   "Willpower": -15,
+   "Wisdom": -15
+ },
+ {
+   "Name": "Prisoner",
+   "Def": 1,
+   "Evade": 10,
+   "M.Def": 1,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Bard",
+   "Def": 2,
+   "Evade": 10,
+   "M.Def": 1,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Karate",
+   "Def": 5,
+   "Evade": 20,
+   "M.Def": 2,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Bl.Belt",
+   "Def": 10,
+   "Evade": 30,
+   "M.Def": 3,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Ninja",
+   "Def": 24,
+   "Evade": 70,
+   "M.Def": 15,
+   "M.Evade": 8,
+   "Agility": 3,
+   "Willpower": 0,
+   "Wisdom": 0
+ }
+]
+}

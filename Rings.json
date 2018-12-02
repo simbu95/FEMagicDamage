@@ -1,0 +1,212 @@
+{"Data":[
+ {
+   "Name": "None",
+   "Def": 0,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Iron",
+   "Def": 2,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Shadow",
+   "Def": 2,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Darkness",
+   "Def": 3,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Black",
+   "Def": 4,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Paladin",
+   "Def": 5,
+   "Evade": 0,
+   "M.Def": 1,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Silver",
+   "Def": 6,
+   "Evade": 0,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Diamond",
+   "Def": 7,
+   "Evade": 0,
+   "M.Def": 3,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Zeus",
+   "Def": 10,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Samurai",
+   "Def": 8,
+   "Evade": 0,
+   "M.Def": 5,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Dragoon",
+   "Def": 9,
+   "Evade": 0,
+   "M.Def": 6,
+   "M.Evade": 3,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Crystal",
+   "Def": 10,
+   "Evade": 0,
+   "M.Def": 7,
+   "M.Evade": 4,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 0
+ },
+ {
+   "Name": "IronRing",
+   "Def": 2,
+   "Evade": 10,
+   "M.Def": 2,
+   "M.Evade": 1,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "RubyRing",
+   "Def": 0,
+   "Evade": 10,
+   "M.Def": 3,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Silver",
+   "Def": 4,
+   "Evade": 10,
+   "M.Def": 4,
+   "M.Evade": 4,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Strength",
+   "Def": 2,
+   "Evade": 10,
+   "M.Def": 2,
+   "M.Evade": 2,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Rune",
+   "Def": 5,
+   "Evade": 10,
+   "M.Def": 8,
+   "M.Evade": 8,
+   "Agility": 0,
+   "Willpower": 3,
+   "Wisdom": 3
+ },
+ {
+   "Name": "Crystal",
+   "Def": 20,
+   "Evade": 15,
+   "M.Def": 12,
+   "M.Evade": 10,
+   "Agility": 5,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Diamond",
+   "Def": 6,
+   "Evade": 10,
+   "M.Def": 8,
+   "M.Evade": 6,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Protect",
+   "Def": 10,
+   "Evade": 15,
+   "M.Def": 12,
+   "M.Evade": 10,
+   "Agility": 0,
+   "Willpower": 0,
+   "Wisdom": 0
+ },
+ {
+   "Name": "Cursed",
+   "Def": 0,
+   "Evade": 0,
+   "M.Def": 0,
+   "M.Evade": 0,
+   "Agility": -15,
+   "Willpower": -15,
+   "Wisdom": -15
+ }
+]}
