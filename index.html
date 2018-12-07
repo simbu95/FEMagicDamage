@@ -134,136 +134,150 @@
       });
    </script>
    <script>
-      var SData="";
-      var HData="";
-      var AData="";
-      var RData="";
-      document.getElementById('calc').addEventListener('click',calculate);
-      document.getElementById('clear').addEventListener('click',clear);
-      $.getJSON("Shields.json", function(data) {
-      	SData=data.Data;
-      	ref=$('#Shield')[0];
-        for( x of SData){
-         	var option=document.createElement("option");
-         	option.text=x.Name;
-         	ref.add(option);
-         }})
-      
-      $.getJSON("Helmets.json", function(data) {
-      	 HData=data.Data;
-      	 ref=$('#Helmet')[0];
-         for( x of HData){
-         var option=document.createElement("option");
-         option.text=x.Name;
-         ref.add(option);
-         }})
-      
-      $.getJSON("Armor.json", function(data) {
-      AData=data.Data;
-      ref=$('#Armor')[0];
-         for( x of AData){
-         var option=document.createElement("option");
-         option.text=x.Name;
-         ref.add(option);
-         }})
-      
-      $.getJSON("Rings.json", function(data) {
-      RData=data.Data;
-      ref=$('#Ring')[0];
-         for( x of RData){
-         var option=document.createElement("option");
-         option.text=x.Name;
-         ref.add(option);
-         }})
-      
-      function calculate() {
-      	hi=HData[$('#Helmet')[0].selectedIndex];
-        ai=AData[$('#Armor')[0].selectedIndex];
-      	si=SData[$('#Shield')[0].selectedIndex];
-      	ri=RData[$('#Ring')[0].selectedIndex];
-      	wisdom=Number($('#Wisdom')[0].value)+Number(hi.Wisdom)+Number(ai.Wisdom)+Number(ri.Wisdom)+Number(si.Wisdom);
-        agility=Number($('#Agility')[0].value)+Number(hi.Agility)+Number(ai.Agility)+Number(ri.Agility)+Number(si.Agility);
-        willpower=Number($('#Willpower')[0].value)+Number(hi.Willpower)+Number(ai.Willpower)+Number(ri.Willpower)+Number(si.Willpower);
-      	mdef=Number(hi["M.Def"])+Number(ai["M.Def"])+Number(si["M.Def"])+Number(ri["M.Def"]);
-      	meva=Number(hi["M.Evade"])+Number(ai["M.Evade"])+Number(si["M.Evade"])+Number(ri["M.Evade"]);
-      	smight=Number($('#Might')[0].value);
-      	SMulti=Number($('#Multi')[0].value);
-      	wisdom= wisdom<0 ? 1 : wisdom;
-      	agility= agility<0 ? 1 : agility;
-      	willpower= willpower<0 ? 1 : willpower;
-      	chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
-      	chartdat.sort(function(a,b){return a.Dam-b.Dam});
-      	lab=$('#Name')[0].value;
-      	col='rgb(0, 0, 100)';
-      	switch($('#Color')[0].value) {
-       			case 'Blue':
-         				col='rgb(0, 0, 100)';
-         				break;
-       			case 'Red':
-         				col='rgb(100, 0, 0)';
-         				break;
-      		case 'Green':
-      		 	col='rgb(0, 100, 0)';
-      		 	break;
-      		case 'Black':
-      		 	col='rgb(0, 0, 0)';
-      		 	break;
-       			default:
-         				col='rgb(0, 0, 100)';
-      	}
-      	chart.data.datasets.push({label: lab,
-                 		fill: "false",
-      		borderColor: col,
-                 		data: Merge(chartdat) });
-      	chart.update();
-      }
-      function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
-      	eva=[]
-      	meva=(meva+Math.floor((will+wis)/8))/100;
-      	EMulti=Math.floor(agi/32)+Math.floor((will+wis)/32);
-      	for (i=0;i<=EMulti;i++){
-                 		eva.push(Math.pow(1-meva,(EMulti-i))*Math.pow(meva,i)*math.combinations(EMulti,i));
-             	}
-      	damages=[]
-      	for (i=0;i<50;i++){
-                 		damages.push((1+.01*i)*smight-mdef);
-             	}
-      	calced=[]
-      	for( i=0;i<eva.length;i++){
-                 
-                 		for (M of damages){
-      			damage=M*(SMulti-i);
-      			if(damage<0){
-                         	damage=1;
-                     	}
-      			percent=eva[i]/50;
-      			calced.push({Dam: damage,Per: percent});
-      		}
-      	}
-      	return calced;
-      		
-      }
-      function Merge(data){
-      	ret=[];
-      	total=1;
-      	index=0;
-      	for(x=0;x<=2700;x+=100){
-      	if(index<data.length){
-      		while(data[index].Dam<=x){
-      			total=total-data[index].Per;
-      			index++;
-      			if(index>=data.length){
-      				break;
-      			}
-      		}
-      	}
-      	ret.push(total);
-      	}
-      	return ret;
-      }
-      function clear(){
-      	chart.data.datasets=[];
-      	chart.update();
-      }
+var SData = "";
+var HData = "";
+var AData = "";
+var RData = "";
+document.getElementById('calc').addEventListener('click', calculate);
+document.getElementById('clear').addEventListener('click', clear);
+$.getJSON("Shields.json", function (data) {
+    SData = data.Data;
+    ref = $('#Shield')[0];
+    for (x of SData) {
+        var option = document.createElement("option");
+        option.text = x.Name;
+        ref.add(option);
+    }
+})
+
+$.getJSON("Helmets.json", function (data) {
+    HData = data.Data;
+    ref = $('#Helmet')[0];
+    for (x of HData) {
+        var option = document.createElement("option");
+        option.text = x.Name;
+        ref.add(option);
+    }
+})
+
+$.getJSON("Armor.json", function (data) {
+    AData = data.Data;
+    ref = $('#Armor')[0];
+    for (x of AData) {
+        var option = document.createElement("option");
+        option.text = x.Name;
+        ref.add(option);
+    }
+})
+
+$.getJSON("Rings.json", function (data) {
+    RData = data.Data;
+    ref = $('#Ring')[0];
+    for (x of RData) {
+        var option = document.createElement("option");
+        option.text = x.Name;
+        ref.add(option);
+    }
+})
+
+function calculate() {
+    hi = HData[$('#Helmet')[0].selectedIndex];
+    ai = AData[$('#Armor')[0].selectedIndex];
+    si = SData[$('#Shield')[0].selectedIndex];
+    ri = RData[$('#Ring')[0].selectedIndex];
+    wisdom = Number($('#Wisdom')[0].value) + Number(hi.Wisdom) + Number(ai.Wisdom) + Number(ri.Wisdom) + Number(si.Wisdom);
+    agility = Number($('#Agility')[0].value) + Number(hi.Agility) + Number(ai.Agility) + Number(ri.Agility) + Number(si.Agility);
+    willpower = Number($('#Willpower')[0].value) + Number(hi.Willpower) + Number(ai.Willpower) + Number(ri.Willpower) + Number(si.Willpower);
+    mdef = Number(hi["M.Def"]) + Number(ai["M.Def"]) + Number(si["M.Def"]) + Number(ri["M.Def"]);
+    meva = Number(hi["M.Evade"]) + Number(ai["M.Evade"]) + Number(si["M.Evade"]) + Number(ri["M.Evade"]);
+    smight = Number($('#Might')[0].value);
+    SMulti = Number($('#Multi')[0].value);
+    wisdom = wisdom < 0 ? 1 : wisdom;
+    agility = agility < 0 ? 1 : agility;
+    willpower = willpower < 0 ? 1 : willpower;
+    chartdat = Damage(agility, willpower, wisdom, mdef, meva, smight, SMulti);
+    chartdat.sort(function (a, b) {
+        return a.Dam - b.Dam
+    });
+    lab = $('#Name')[0].value;
+    col = 'rgb(0, 0, 100)';
+    switch ($('#Color')[0].value) {
+        case 'Blue':
+            col = 'rgb(0, 0, 100)';
+            break;
+        case 'Red':
+            col = 'rgb(100, 0, 0)';
+            break;
+        case 'Green':
+            col = 'rgb(0, 100, 0)';
+            break;
+        case 'Black':
+            col = 'rgb(0, 0, 0)';
+            break;
+        default:
+            col = 'rgb(0, 0, 100)';
+    }
+    chart.data.datasets.push({
+        label: lab,
+        fill: "false",
+        borderColor: col,
+        data: Merge(chartdat)
+    });
+    chart.update();
+}
+
+function Damage(agi, will, wis, mdef, meva, smight, SMulti) {
+    eva = []
+    meva = (meva + Math.floor((will + wis) / 8)) / 100;
+    EMulti = Math.floor(agi / 32) + Math.floor((will + wis) / 32);
+    for (i = 0; i <= EMulti; i++) {
+        eva.push(Math.pow(1 - meva, (EMulti - i)) * Math.pow(meva, i) * math.combinations(EMulti, i));
+    }
+    damages = []
+    for (i = 0; i < 50; i++) {
+        damages.push((1 + .01 * i) * smight - mdef);
+    }
+    calced = []
+    for (i = 0; i < eva.length; i++) {
+
+        for (M of damages) {
+            damage = M * (SMulti - i);
+            if (damage < 0) {
+                damage = 1;
+            }
+            percent = eva[i] / 50;
+            calced.push({
+                Dam: damage,
+                Per: percent
+            });
+        }
+    }
+    return calced;
+
+}
+
+function Merge(data) {
+    ret = [];
+    total = 1;
+    index = 0;
+    for (x = 0; x <= 2700; x += 100) {
+        if (index < data.length) {
+            while (data[index].Dam <= x) {
+                total = total - data[index].Per;
+                index++;
+                if (index >= data.length) {
+                    break;
+                }
+            }
+        }
+        ret.push(total);
+    }
+    return ret;
+}
+
+function clear() {
+    chart.data.datasets = [];
+    chart.update();
+}
    </script>
 </html>
