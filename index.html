@@ -1,275 +1,269 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-<head>
-    <meta charset="utf-8" />
-    <title>FF4 Magic Damage Calc</title>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 panel">
-        <div class="inner-panel">
-		  <div class="container">
-			  <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Spell Might</span>
-                </div>
-                <div class="col-3">
-					<input type="number" id="Might" min=0 max=2000 step=10 value="200"/>
-				</div>
-			</div>
-			  <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Spell Multipliers</span>
-                </div>
-                <div class="col-3">
-					<input type="number" id="Multi" min=0 max=99 step=1 value="9"/>
-				</div>
-			</div>
-			<div class="row">
-                <div class="col-6">
-                    <span class="input-span">Agility</span>
-                </div>
-                <div class="col-3">
-					<input type="number" id="Agility" min=0 max=99 step=1 value="0"/>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Wisdom</span>
-                </div>
-                <div class="col-3">
-					<input type="number" id="Wisdom" min=0 max=99 step=1 value="0"/>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Willpower</span>
-                </div>
-                <div class="col-3">
-					<input type="number" id="Willpower" min=0 max=99 step=1 value="0"/>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Shield</span>
-                </div>
-                <div class="col-6">
-					<select id="Shield"></select>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Helmet</span>
-                </div>
-                <div class="col-6">
-					<select id="Helmet"></select>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Armor</span>
-                </div>
-                <div class="col-6">
-					<select id="Armor"></select>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col-6">
-                    <span class="input-span">Ring</span>
-                </div>
-                <div class="col-6">
-					<select id="Ring"></select>
-				</div>
-		<div class="col-6">
-                    <span class="input-span">Line Name</span>
-                </div>
-                <div class="col-6">
-					<input type="text" id="Name" value="Death Chance"/>
-				</div>
-		<div class="col-6">
-                    <span class="input-span">Line Color</span>
-                </div>
-                <div class="col-6">
-					<select id="Color">
-						<option selected value="Blue">Blue</option>
-  						<option value="Red">Red</option>
-  						<option value="Green">Green</option>
-  						<option value="Black">Black</option>
-					</select>
-				</div>
-                <div class="row">
-				    <div class="col"><button id="calc">Calculate!</button></div>
-                    <div class="col"><button id="clear">Clear!</button></div>
-			    </div>
-
-			</div>
-          </div>
-        </div>
-	
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <head>
+      <meta charset="utf-8" />
+      <title>FF4 Magic Damage Calc</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4 panel">
+               <div class="inner-panel">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Line Name</span>
+                        </div>
+                        <div class="col-6">
+                           <input type="text" id="Name" value="Death Chance"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Line Color</span>
+                        </div>
+                        <div class="col-6">
+                           <select id="Color">
+                              <option selected value="Blue">Blue</option>
+                              <option value="Red">Red</option>
+                              <option value="Green">Green</option>
+                              <option value="Black">Black</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Spell Might</span>
+                        </div>
+                        <div class="col-3">
+                           <input type="number" id="Might" min=0 max=2000 step=10 value="200"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Spell Multipliers</span>
+                        </div>
+                        <div class="col-3">
+                           <input type="number" id="Multi" min=0 max=99 step=1 value="9"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Agility</span>
+                        </div>
+                        <div class="col-3">
+                           <input type="number" id="Agility" min=0 max=99 step=1 value="0"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Wisdom</span>
+                        </div>
+                        <div class="col-3">
+                           <input type="number" id="Wisdom" min=0 max=99 step=1 value="0"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Willpower</span>
+                        </div>
+                        <div class="col-3">
+                           <input type="number" id="Willpower" min=0 max=99 step=1 value="0"/>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Shield</span>
+                        </div>
+                        <div class="col-6">
+                           <select id="Shield"></select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Helmet</span>
+                        </div>
+                        <div class="col-6">
+                           <select id="Helmet"></select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Armor</span>
+                        </div>
+                        <div class="col-6">
+                           <select id="Armor"></select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-6">
+                           <span class="input-span">Ring</span>
+                        </div>
+                        <div class="col-6">
+                           <select id="Ring"></select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col"><button id="calc">Calculate!</button></div>
+                        <div class="col"><button id="clear">Clear!</button></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6 panel">
+               <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+         </div>
       </div>
-      <div class="col-lg-6 panel">
-		<canvas id="myChart" width="400" height="400"></canvas>  
-      </div>
-    </div>  
-  </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.3.0/math.js"></script>
-<script> 
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-	labels: [0, 100, 200, 300, 400, 500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700],
-        datasets: []
-    },
-
-    // Configuration options go here
-    options: {}
-});
-</script>
-<script>
-	var SData="";
-	var HData="";
-	var AData="";
-	var RData="";
-	document.getElementById('calc').addEventListener('click',calculate);
-	document.getElementById('clear').addEventListener('click',clear);
-	 $.getJSON("Shields.json", function(data) {
-SData=data.Data;
-ref=$('#Shield')[0];
-    for( x of SData){
-    var option=document.createElement("option");
-    option.text=x.Name;
-    ref.add(option);
-    }})
-	
-	$.getJSON("Helmets.json", function(data) {
-		HData=data.Data;
-		 ref=$('#Helmet')[0];
-    for( x of HData){
-    var option=document.createElement("option");
-    option.text=x.Name;
-    ref.add(option);
-    }})
-	
-	$.getJSON("Armor.json", function(data) {
-AData=data.Data;
-ref=$('#Armor')[0];
-    for( x of AData){
-    var option=document.createElement("option");
-    option.text=x.Name;
-    ref.add(option);
-    }})
-	
-	$.getJSON("Rings.json", function(data) {
-RData=data.Data;
-ref=$('#Ring')[0];
-    for( x of RData){
-    var option=document.createElement("option");
-    option.text=x.Name;
-    ref.add(option);
-    }})
-	
-	function calculate() {
-		hi=HData[$('#Helmet')[0].selectedIndex];
-			   ai=AData[$('#Armor')[0].selectedIndex];
-			   si=SData[$('#Shield')[0].selectedIndex];
-			   ri=RData[$('#Ring')[0].selectedIndex];
-		wisdom=Number($('#Wisdom')[0].value)+Number(hi.Wisdom)+Number(ai.Wisdom)+Number(ri.Wisdom)+Number(si.Wisdom);
-			 agility=Number($('#Agility')[0].value)+Number(hi.Agility)+Number(ai.Agility)+Number(ri.Agility)+Number(si.Agility);
-			 willpower=Number($('#Willpower')[0].value)+Number(hi.Willpower)+Number(ai.Willpower)+Number(ri.Willpower)+Number(si.Willpower);
-		mdef=Number(hi["M.Def"])+Number(ai["M.Def"])+Number(si["M.Def"])+Number(ri["M.Def"]);
-		meva=Number(hi["M.Evade"])+Number(ai["M.Evade"])+Number(si["M.Evade"])+Number(ri["M.Evade"]);
-		smight=Number($('#Might')[0].value);
-		SMulti=Number($('#Multi')[0].value);
-		wisdom= wisdom<0 ? 1 : wisdom;
-		agility= agility<0 ? 1 : agility;
-		willpower= willpower<0 ? 1 : willpower;
-		chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
-		chartdat.sort(function(a,b){return a.Dam-b.Dam});
-		lab=$('#Name')[0].value;
-		col='rgb(0, 0, 100)';
-		switch($('#Color')[0].value) {
-  			case 'Blue':
-    				col='rgb(0, 0, 100)';
-    				break;
-  			case 'Red':
-    				col='rgb(100, 0, 0)';
-    				break;
-			case 'Green':
-			 	col='rgb(0, 100, 0)';
-			 	break;
-			case 'Black':
-			 	col='rgb(0, 0, 0)';
-			 	break;
-  			default:
-    				col='rgb(0, 0, 100)';
-		}
-		chart.data.datasets.push({label: lab,
-            		fill: "false",
-			borderColor: col,
-            		data: Merge(chartdat) });
-		chart.update();
-	}
-	function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
-		eva=[]
-		meva=(meva+Math.floor((will+wis)/8))/100;
-		EMulti=Math.floor(agi/32)+Math.floor((will+wis)/32);
-		for (i=0;i<=EMulti;i++){
-            		eva.push(Math.pow(1-meva,(EMulti-i))*Math.pow(meva,i)*math.combinations(EMulti,i));
-        	}
-		damages=[]
-		for (i=0;i<50;i++){
-            		damages.push((1+.01*i)*smight-mdef);
-        	}
-		calced=[]
-		for( i=0;i<eva.length;i++){
-            
-            		for (M of damages){
-				damage=M*(SMulti-i);
-				if(damage<0){
-                    			damage=1;
-                		}
-				percent=eva[i]/50;
-				calced.push({Dam: damage,Per: percent});
-			}
-		}
-		return calced;
-			
-	}
-	function Merge(data){
-		ret=[];
-		total=1;
-		index=0;
-		for(x=0;x<=2700;x+=100){
-		if(index<data.length){
-			while(data[index].Dam<=x){
-				total=total-data[index].Per;
-				index++;
-				if(index>=data.length){
-					break;
-				}
-			}
-		}
-		ret.push(total);
-		}
-		return ret;
-	}
-	function clear(){
-		chart.data.datasets=[];
-		chart.update();
-	}
-</script>
+   </body>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"> </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.3.0/math.js"></script>
+   <script> 
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+      	labels: [0, 100, 200, 300, 400, 500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600,2700],
+              datasets: []
+          },
+          options: {}
+      });
+   </script>
+   <script>
+      var SData="";
+      var HData="";
+      var AData="";
+      var RData="";
+      document.getElementById('calc').addEventListener('click',calculate);
+      document.getElementById('clear').addEventListener('click',clear);
+      $.getJSON("Shields.json", function(data) {
+      	SData=data.Data;
+      	ref=$('#Shield')[0];
+        for( x of SData){
+         	var option=document.createElement("option");
+         	option.text=x.Name;
+         	ref.add(option);
+         }})
+      
+      $.getJSON("Helmets.json", function(data) {
+      	 HData=data.Data;
+      	 ref=$('#Helmet')[0];
+         for( x of HData){
+         var option=document.createElement("option");
+         option.text=x.Name;
+         ref.add(option);
+         }})
+      
+      $.getJSON("Armor.json", function(data) {
+      AData=data.Data;
+      ref=$('#Armor')[0];
+         for( x of AData){
+         var option=document.createElement("option");
+         option.text=x.Name;
+         ref.add(option);
+         }})
+      
+      $.getJSON("Rings.json", function(data) {
+      RData=data.Data;
+      ref=$('#Ring')[0];
+         for( x of RData){
+         var option=document.createElement("option");
+         option.text=x.Name;
+         ref.add(option);
+         }})
+      
+      function calculate() {
+      	hi=HData[$('#Helmet')[0].selectedIndex];
+        ai=AData[$('#Armor')[0].selectedIndex];
+      	si=SData[$('#Shield')[0].selectedIndex];
+      	ri=RData[$('#Ring')[0].selectedIndex];
+      	wisdom=Number($('#Wisdom')[0].value)+Number(hi.Wisdom)+Number(ai.Wisdom)+Number(ri.Wisdom)+Number(si.Wisdom);
+        agility=Number($('#Agility')[0].value)+Number(hi.Agility)+Number(ai.Agility)+Number(ri.Agility)+Number(si.Agility);
+        willpower=Number($('#Willpower')[0].value)+Number(hi.Willpower)+Number(ai.Willpower)+Number(ri.Willpower)+Number(si.Willpower);
+      	mdef=Number(hi["M.Def"])+Number(ai["M.Def"])+Number(si["M.Def"])+Number(ri["M.Def"]);
+      	meva=Number(hi["M.Evade"])+Number(ai["M.Evade"])+Number(si["M.Evade"])+Number(ri["M.Evade"]);
+      	smight=Number($('#Might')[0].value);
+      	SMulti=Number($('#Multi')[0].value);
+      	wisdom= wisdom<0 ? 1 : wisdom;
+      	agility= agility<0 ? 1 : agility;
+      	willpower= willpower<0 ? 1 : willpower;
+      	chartdat=Damage(agility,willpower,wisdom,mdef,meva,smight,SMulti);
+      	chartdat.sort(function(a,b){return a.Dam-b.Dam});
+      	lab=$('#Name')[0].value;
+      	col='rgb(0, 0, 100)';
+      	switch($('#Color')[0].value) {
+       			case 'Blue':
+         				col='rgb(0, 0, 100)';
+         				break;
+       			case 'Red':
+         				col='rgb(100, 0, 0)';
+         				break;
+      		case 'Green':
+      		 	col='rgb(0, 100, 0)';
+      		 	break;
+      		case 'Black':
+      		 	col='rgb(0, 0, 0)';
+      		 	break;
+       			default:
+         				col='rgb(0, 0, 100)';
+      	}
+      	chart.data.datasets.push({label: lab,
+                 		fill: "false",
+      		borderColor: col,
+                 		data: Merge(chartdat) });
+      	chart.update();
+      }
+      function Damage(agi,will,wis,mdef,meva,smight,SMulti) {
+      	eva=[]
+      	meva=(meva+Math.floor((will+wis)/8))/100;
+      	EMulti=Math.floor(agi/32)+Math.floor((will+wis)/32);
+      	for (i=0;i<=EMulti;i++){
+                 		eva.push(Math.pow(1-meva,(EMulti-i))*Math.pow(meva,i)*math.combinations(EMulti,i));
+             	}
+      	damages=[]
+      	for (i=0;i<50;i++){
+                 		damages.push((1+.01*i)*smight-mdef);
+             	}
+      	calced=[]
+      	for( i=0;i<eva.length;i++){
+                 
+                 		for (M of damages){
+      			damage=M*(SMulti-i);
+      			if(damage<0){
+                         	damage=1;
+                     	}
+      			percent=eva[i]/50;
+      			calced.push({Dam: damage,Per: percent});
+      		}
+      	}
+      	return calced;
+      		
+      }
+      function Merge(data){
+      	ret=[];
+      	total=1;
+      	index=0;
+      	for(x=0;x<=2700;x+=100){
+      	if(index<data.length){
+      		while(data[index].Dam<=x){
+      			total=total-data[index].Per;
+      			index++;
+      			if(index>=data.length){
+      				break;
+      			}
+      		}
+      	}
+      	ret.push(total);
+      	}
+      	return ret;
+      }
+      function clear(){
+      	chart.data.datasets=[];
+      	chart.update();
+      }
+   </script>
 </html>
